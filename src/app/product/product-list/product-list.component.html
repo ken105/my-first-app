@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        @for (product of products; track product; let productId = $index;) {
+            <div class="col-sm">
+                <!-- [routerLink]="['detail'] 相対パスで指定-->
+                <a [routerLink]="[productId]">
+                    <div class="card">
+                        <img src="{{product.coverImage}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-title">{{product.name}}</p>
+                            <p class="card-text">{{product.description}}</p>
+
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+
+</div>
