@@ -3,7 +3,8 @@
         @for (product of products; track product; let productId = $index;) {
             <div class="col-sm">
                 <!-- [routerLink]="['detail'] 相対パスで指定-->
-                <a [routerLink]="[productId]">
+                <!-- 自動連番で付与される_idに繊維するようにする -->
+                <a [routerLink]="[product._id]">
                     <div class="card">
                         <img src="{{product.coverImage}}" class="card-img-top" alt="...">
                         <div class="card-body">
